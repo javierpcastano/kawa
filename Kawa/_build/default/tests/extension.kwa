@@ -1,0 +1,58 @@
+var point p1;
+var point p2;
+var point p3;
+var pointt p4;
+var int i;
+var bool b;
+
+class point {
+  attribute int x;
+  attribute int y;
+
+  method void constructor(int x, int y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class pointt {
+  attribute int x;
+  attribute int y;
+
+  method void constructor(int x, int y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+main {
+  // Création d’objets « point » 
+  p1 = new point(1, 2);
+  p2 = new point(1, 2);
+  p3 = new point(2, 2);
+  p4 = new pointt(1, 2);
+  i = 42;
+  b = true;
+
+  // 1) Même classe, mêmes valeurs de champ => true
+  print(p1 === p2);    // attendu : true
+  
+
+  // 2) Même classe, mais champs différents => false
+  print(p1 === p3);    // attendu : false
+
+  // 3) Négation de l’égalité structurelle
+  print(p1 =/= p2);    // attendu : false
+  print(p1 =/= p3);    // attendu : true
+
+  // 4) Deux constantes entières identiques => true
+  print(i === 42);     // attendu : true
+  print(i === i);     // attendu : true
+
+  // 5) Diffrenté classe, mêmes valeurs de champ => false
+  //print(p1 === p4);    // attendu : erreur
+
+  // 6) Comparaison de types différents (int vs bool)
+  //  erreur à l’exécution
+  //print(i =/= b);  // attendu : erreur
+}

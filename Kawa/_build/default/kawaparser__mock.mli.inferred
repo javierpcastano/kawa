@@ -1,0 +1,72 @@
+type token =
+    WHILE
+  | VOID
+  | VAR
+  | T_INT
+  | TRUE
+  | THIS
+  | SUB
+  | SEMI
+  | RPAR
+  | RETURN
+  | REM
+  | PRINT
+  | OR
+  | NOT
+  | NEW
+  | NEQS
+  | NEQ
+  | MUL
+  | METHOD
+  | MAIN
+  | LT
+  | LPAR
+  | LE
+  | INT of int
+  | IF
+  | IDENT of string
+  | GT
+  | GE
+  | FALSE
+  | EXTENDS
+  | EQS
+  | EQ
+  | EOF
+  | END
+  | ELSE
+  | DOT
+  | DIV
+  | COMMA
+  | CLASS
+  | BOOL
+  | BEGIN
+  | ATTRIBUTE
+  | AS
+  | AND
+  | ADD
+val menhir_begin_marker : int
+val xv_var_decl : string * Kawa.typ
+val xv_unop : Kawa.unop
+val xv_types : Kawa.typ
+val xv_separated_nonempty_list_COMMA_param_ : (string * Kawa.typ) list
+val xv_separated_nonempty_list_COMMA_expression_ : Kawa.expr list
+val xv_separated_list_COMMA_param_ : (string * Kawa.typ) list
+val xv_separated_list_COMMA_expression_ : Kawa.expr list
+val xv_program : Kawa.program
+val xv_param : string * Kawa.typ
+val xv_method_def : Kawa.method_def
+val xv_memoire : Kawa.mem_access
+val xv_loption_separated_nonempty_list_COMMA_param__ :
+  (string * Kawa.typ) list
+val xv_loption_separated_nonempty_list_COMMA_expression__ : Kawa.expr list
+val xv_list_var_decl_ : (string * Kawa.typ) list
+val xv_list_method_def_ : Kawa.method_def list
+val xv_list_instruction_ : Kawa.seq
+val xv_list_class_def_ : Kawa.class_def list
+val xv_list_attr_decl_ : (string * Kawa.typ) list
+val xv_instruction : Kawa.instr
+val xv_expression : Kawa.expr
+val xv_class_def : Kawa.class_def
+val xv_binop : Kawa.binop
+val xv_attr_decl : string * Kawa.typ
+val menhir_end_marker : int

@@ -1,0 +1,12 @@
+main {
+  print(true); //test commentaire 1
+  print(1==1); //affiche true
+  print(1!=1); //affiche false
+  print(2*3 + 5); /*test commentaire 2 */
+  print(-10);
+  print(1 - 10);
+  print(!true);
+  print(true && false); //affiche false
+  print(true || false); //affiche true
+}
+ 
